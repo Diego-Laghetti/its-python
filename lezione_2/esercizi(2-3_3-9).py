@@ -63,21 +63,23 @@ print (f"ciao {guest[4]} che ne dici di andare a cena fuori insieme ai tuoi comp
 print (f"ciao {guest[5]} che ne dici di andare a cena fuori insieme ai tuoi compagni di squadra? ")
 
 #esercizio3-7
+name=guest.pop(5)
 print ("posso far venire solo due di voi per un equivoco")
 
-print (f" scusa {guest[5]} ma non è più disponibile il tavolo, faremo un'altra volta")
-guest.pop(5)
+print (f" scusa {name} ma non è più disponibile il tavolo, faremo un'altra volta")
 
-print (f" scusa {guest[4]}ma non è più disponibile il tavolo, faremo un'altra volta")
-guest.pop(4)
+name=guest.pop(4)
 
-print (f" scusa {guest[3]}ma non è più disponibile il tavolo, faremo un'altra volta")
-guest.pop(3)
+print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
+name=guest.pop(3)
 
-print (f" scusa {guest[2]}ma non è più disponibile il tavolo, faremo un'altra volta")
-guest.pop(2)
+print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
 
-print (f" {guest[0]} e {guest[1]} traanquilli, siete ancora invitati")
+name=guest.pop(2)
+
+print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
+
+print (f" {guest[0]} e {guest[1]} tranquilli, siete ancora invitati")
 
 del guest
 
@@ -85,12 +87,10 @@ del guest
 places = ["Amogus","Ubuntu","SSLazio","Skibidi","Sigma"]
 print (places)
 
-a_places = sorted(places)
-print (a_places)
+places = sorted(places)
 print (places)
 
-b_places = sorted(places, reverse=True)
-print (b_places)
+places = sorted(places, reverse=True)
 print (places)
 
 places.reverse()
@@ -102,7 +102,7 @@ print (places)
 places.sort()
 print (places)
 
-places.sort()
+places.sort(reverse=True)
 print (places)
 
 #esercizio3-9
