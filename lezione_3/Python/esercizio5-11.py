@@ -1,5 +1,5 @@
 #esercizio5-11
-numeri=list(range(1, 10))
+numeri=list(range(1, 13))
 print(numeri)
 
 for i in numeri:
