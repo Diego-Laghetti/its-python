@@ -1,5 +1,5 @@
 #esercizio5-9
-elenco= ["Diego", "Luca", "Andrea", "Alessio","Davide"]
+elenco= ["Diego", "Admin", "Andrea", "Alessio","Davide"]
 
 for nomi in elenco:
     if nomi=="Admin":
