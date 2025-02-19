@@ -70,14 +70,14 @@ print (f" scusa {name} ma non è più disponibile il tavolo, faremo un'altra vol
 
 name=guest.pop(4)
 
-print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
+print (f" scusa {name} ma non è più disponibile il tavolo, faremo un'altra volta")
 name=guest.pop(3)
 
-print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
+print (f" scusa {name} ma non è più disponibile il tavolo, faremo un'altra volta")
 
 name=guest.pop(2)
 
-print (f" scusa {name}ma non è più disponibile il tavolo, faremo un'altra volta")
+print (f" scusa {name} ma non è più disponibile il tavolo, faremo un'altra volta")
 
 print (f" {guest[0]} e {guest[1]} tranquilli, siete ancora invitati")
 
