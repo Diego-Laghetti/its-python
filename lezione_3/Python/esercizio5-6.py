@@ -1,7 +1,6 @@
 #esercizio5-6
 età = 25  
 
-
 if età < 2:
     print("La persona è un neonato.")
 elif età >= 2 and età < 4:
