@@ -4,6 +4,6 @@ favorite_places = {'Luca': ['Paris', 'Tokyo', 'New York'],
                 'Diego': ['Rome', 'Berlin', 'Sydney', 'Barcelona']}
 
 for name, places in favorite_places.items():
-    print(f"{name}")
+    print(name)
     for place in places:
-        print(f" {place}")
+        print(place)

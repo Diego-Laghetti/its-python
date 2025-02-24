@@ -1,5 +1,5 @@
 #esercizio5-1
-car= str(input("inserisci una marca di una macchhina"))
+car= str(input("Inserisci una marca di una macchina"))
 print("Is car == 'subaru'? I predict True.")
 a:bool=True
 if car == "subaru":

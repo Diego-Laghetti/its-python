@@ -5,4 +5,4 @@ glossario: dict={"len":"\nLa funzione integrata Python len vi permette di sapere
                 "print":"\npermette di stampare qualcosa sullo schermo o in un dispositivo.",
                 "while":"\nun blocco di codice viene eseguito ripetutamente finché una condizione è vera."}
 for x in glossario: 
-    print(x, glossario[x])
+    print (x, glossario[x])

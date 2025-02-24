@@ -1,6 +1,6 @@
 #esercizio5-11
 numeri=list(range(1, 13))
-print(numeri)
+print (numeri)
 
 for i in numeri:
     if i==1:

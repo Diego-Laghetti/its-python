@@ -14,4 +14,4 @@ for doppione in range (len(new_users1)):
     if new_users1[doppione] in current_users1:
         print(f"ci dispiace ma il nome utente {new_users1[doppione]} e' gia' stato utilizzato nella lista {current_users1}")
     else:
-        print(f"{new_users1[doppione]} nome utente valido")
+        print(f"{new_users1[doppione]} Nome utente valido")

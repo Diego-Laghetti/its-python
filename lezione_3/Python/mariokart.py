@@ -2,10 +2,10 @@
 x = input("inserisci numero: ")
 
 if x==1:
-    print (f"{x}st")
+    print(f"{x}st")
 elif x==2:
-    print (f"{x}nd")
+    print(f"{x}nd")
 elif x==3:
-    print (f"{x}rd")
+    print(f"{x}rd")
 else:
-    print (f"{x}th")
+    print(f"{x}th")

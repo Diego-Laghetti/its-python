@@ -6,7 +6,7 @@ piccione: dict={"animale":"piccione", "razza":"stefano", "padrone":"benigni"}
 pets = [cane, gatto, piccione]
 
 for i in pets:
-    print(f"animale: {i['animale']}")
-    print(f"razza: {i['razza']}")
-    print(f"padrone: {i['padrone']}")
+    print(f"Animale: {i['animale']}")
+    print(f"Razza: {i['razza']}")
+    print(f"Padrone: {i['padrone']}")
     

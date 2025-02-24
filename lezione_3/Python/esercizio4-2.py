@@ -1,5 +1,5 @@
 #esercizio4-2
-animali= ["Bassotto", "Maremmano", "Labrador"]
+animali= ["Bassotto", "Maltese", "Labrador"]
 
 for razza in animali:
     print (f"Un {razza} sarebbe un ottimo animale domestico")

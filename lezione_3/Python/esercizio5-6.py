@@ -1,5 +1,5 @@
 #esercizio5-6
-età= int(input("Inserisci l'eta della persona:\n")) 
+età= int(input("Inserisci l'eta della persona: \n")) 
 
 if età < 2:
     print("La persona è un neonato.")

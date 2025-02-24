@@ -11,4 +11,4 @@ for nomi in elenco:
 for index in range (len(elenco)):
     elenco.pop()
 if len(elenco)==0:
-    print("la tua lista e' vuota, dobbiamo trovare alcuni utenti")
+    print("La tua lista e' vuota, dobbiamo trovare alcuni utenti")

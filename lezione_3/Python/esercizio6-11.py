@@ -19,6 +19,6 @@ cities = {
 
 for city, info in cities.items():
     print(f"City: {city}")
-    print(f"  Country: {info['country']}")
-    print(f"  Population: {info['population']}")
-    print(f"  Fact: {info['fact']}")
+    print(f"Country: {info['country']}")
+    print(f"Population: {info['population']}")
+    print(f"Fact: {info['fact']}")

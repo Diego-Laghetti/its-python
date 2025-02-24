@@ -7,6 +7,6 @@ numeri = {"Diego": [17, 9, 69],
 
 
 for person, numbers in numeri.items():
-    print(f"{person}")
+    print(person)
     for number in numbers:
-        print(f"{number}")
+        print(number)
