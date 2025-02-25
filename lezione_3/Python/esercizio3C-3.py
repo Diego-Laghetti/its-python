@@ -1,6 +1,6 @@
 #esercizio3c-3
 oggetti = []
-x=str()
+
 
 while len(oggetti) < 3:
     x=str(input("Inserisci oggetto "))
