@@ -1,7 +1,6 @@
 #esercizio3c-3
 oggetti = []
 
-
 while len(oggetti) < 3:
     x=str(input("Inserisci oggetto "))
     oggetti.append(x)
