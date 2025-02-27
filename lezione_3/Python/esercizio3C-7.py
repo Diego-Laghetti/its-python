@@ -20,4 +20,6 @@ perct=testa/8*100
 percc=croce/8*100
 print(f"la percentuale delle volte in cui è uscita testa è {perct}%")
 print(f"la percentuale delle volte in cui è uscita croce è {percc}%")
+print(f"la percentuale delle volte in cui è uscita testa è {testa}/8")
+print(f"la percentuale delle volte in cui è uscita croce è {croce}/8")
 
