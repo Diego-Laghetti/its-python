@@ -15,7 +15,5 @@ match punto:
         print(f"Il punto {punto} si trova nel secondo quadrante.")
     case (x, y) if x < 0 and y < 0:
         print(f"Il punto {punto} si trova nel terzo quadrante.")
-    case (x, y) if x > 0 and y < 0:
-        print(f"Il punto {punto} si trova nel quarto quadrante.")
     case _:
-        print("Coordinate non valide.")
+        print(f"Il punto {punto} si trova nel quarto quadrante.")
