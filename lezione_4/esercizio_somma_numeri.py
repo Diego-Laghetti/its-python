@@ -11,4 +11,4 @@ sum: int = 0
 
 for i in range(35, 50):
     sum += i
-print("La somma dei numeri che vanno da 35 a 50 è", sum )
+print("La somma dei numeri che vanno da 35 a 50 è", sum)
