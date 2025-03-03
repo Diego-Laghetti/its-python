@@ -6,7 +6,4 @@ while cont < 4:
     n= int(input("Leggi il valore di n: "))
     if n > max:
         max = n
-    else:
-        continue
-
 print(max)        
