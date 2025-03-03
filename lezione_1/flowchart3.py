@@ -1,4 +1,4 @@
-#flowchart4
+#flowchart3
 sum=0
 cont=1
 while True:
@@ -6,6 +6,6 @@ while True:
     if n > 0:
         sum=sum+n
     cont=cont+1
-    if cont == 5:
+    if cont > 5:
         break
 print(sum)
