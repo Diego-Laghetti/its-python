@@ -4,7 +4,7 @@ if n<2:
     print(f"Il numero non è primo")
 else:
     div=2
-    while div < n:
+    while div <= n**0.5:
         if n%div==0:
             print("Il numero non è primo")
             break
