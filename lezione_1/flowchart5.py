@@ -1,4 +1,4 @@
-#flowchart5_1
+#flowchart5
 n= int(input("Leggi n: "))
 if n<2:
     print(f"Il numero non è primo")

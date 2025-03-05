@@ -1,7 +1,14 @@
 #esercizio8-4
 def make_shirt(size: str, text: str):
-    print(f"The size is {size} and the text on the shirt is {text}")
+    size: str= (input("Taglia: "))
+    text="I love python"
+    match(size):
+        case size if size == "L" and text == "I love python":
+            print(f"The size is {size} and the text on the shirt is {text}")
+        case size if size == "M" and text == "I love python":
+            print(f"The size is {size} and the text on the shirt is {text}")
+        case _:
+            print(f"The size is {size} and the text on the shirt is Forza Lazio")
 
-make_shirt(size = "L", text = "I love python")
-make_shirt(text = "I love python", size = "M")
-make_shirt(size = "S", text = "Forza Lazio")
+make_shirt("text", "size")
+
