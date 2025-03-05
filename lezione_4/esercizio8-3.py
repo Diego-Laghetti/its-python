@@ -5,5 +5,3 @@ def make_shirt(size: str, text: str):
 make_shirt("L","San Diego")
 make_shirt(size = "L", text = "San Diego")
 make_shirt(text = "San Diego", size = "L")
-    
-    

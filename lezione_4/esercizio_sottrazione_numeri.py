@@ -5,6 +5,6 @@ def sottrazione (a: int, b: int):
     return risultato
 
 a = sottrazione (10, 5)
-print(a)
+print (a)
 b= sottrazione (100, 75)
-print(b)
+print (b)
