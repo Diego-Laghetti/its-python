@@ -6,7 +6,7 @@ max=vendite
 min_nome= nome
 min = vendite
 cont = 0
-for i in range (2):
+for i in range (19):
     new_nome = str(input("Inserisci nuovo nome: "))
     new_vendite = int(input("Inserisci nuove vendite: "))
     if new_vendite > max:
