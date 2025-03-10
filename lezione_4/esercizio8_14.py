@@ -1,11 +1,12 @@
 #esercizio8-14
-def make_car(brand, type, color, tow):
-    
-    return f"{brand}, modello {type}, colore {color}, tow_package {tow}"
-
-profilo = {"brand": "porsche", "modello": "911", "colore": "rosa", "tow_package": "presente"}
-
-
-auto = make_car(profilo["brand"], profilo["modello"], profilo["colore"], profilo["tow_package"])
-
-print(auto)
+def make_car(produttore: str, modello:str, color:str= None, tow_package:bool=None):
+    if color == None and tow_package == None:
+        car: dict = {"produttore": produttore, "modello":modello}
+    elif color == None and tow_package != None:
+        car: dict = {"produttore": produttore, "modello":modello, "tow_package": tow_package}
+    elif color == None and tow_package != None:
+        car: dict = {"produttore": produttore, "modello":modello, "colore": color}
+    else:
+        car: dict = {"produttore": produttore, "modello":modello, "colore": color, "tow_package": tow_package}
+    return car
+print(make_car("porsche", "911gt3rs", color = "rosa"))        
