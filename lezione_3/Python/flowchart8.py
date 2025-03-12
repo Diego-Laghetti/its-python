@@ -1,17 +1,19 @@
 #flowchart8
-
-a = int(input("Inserisci a: "))
-b = int(input("Inserisci b: "))
-
-if a >= b:
-    print("a deve essere minore di b")
-elif a < 0 or b < 0:
-    print("a e b devono essere positivi")
-elif a % 1 != 0 or b % 1 != 0:
-    print("a e b devono essere interi")
-else:
-    somma = 0
-    for i in range(a, b):
-        somma += i
-    print("La somma dei numeri tra a e b è:", somma)
+a = int(input(f"inserisci valore intero positivo a: "))
+b = int(input(f"inserisci valore intero positivo b: "))
+if a < b : 
+    if a > 0 and b > 0 : 
+        if a % 1 == 0 and b % 1 == 0 : 
+            sum = 0 
+            i = a 
+            while i < b : 
+                sum = sum + i 
+                i = i + 1 
+            print(f" la somma è {sum}")
+        else : 
+            print(f" A e B devono essere interi")
+    else : 
+        print (f"A e B devono essere positivi")
+else : 
+    print(f" A deve essere minore di B")
 
