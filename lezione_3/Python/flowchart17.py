@@ -6,24 +6,22 @@ day_min = 0
 cont_norma = 0 
 t_media = 0 
 i = 1 
-while i <= 7 : 
+while i < 8 : 
     temp = int(input("Inserisci temperatura: "))
     t_media += temp 
     if temp > temp_max : 
         temp_max = temp 
         day_max = i  
-    elif temp < temp_min : 
+    if temp < temp_min : 
         temp_min = temp 
         day_min = i 
     if temp >= 10 and temp <= 30 : 
         cont_norma += 1 
         if cont_norma == 7 : 
-            print(f"temperature nella norma")
-        else : 
-            i += 1
+            print(f"temperature nella norma") 
     elif temp < 5 or temp > 35 : 
         print(f"allerta temperatura ")
-
+    i += 1
 t_media = t_media/7
 print(f"la temperatura media è {t_media}")
 print(f"la temperatura massima è {temp_max}")
