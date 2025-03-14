@@ -10,7 +10,6 @@ Persons.
 4. Make a loop that finds and prints
 the youngest person’s name'''
 
-
 class Person:
     def __init__(self, name, age):
         self.name = name
@@ -23,9 +22,9 @@ print(bob.name)
 
 #2
 if bob.age > alice.age:
-    print(bob.age)
+    print(bob.age, bob.name)
 else:
-    print(alice.age)
+    print(alice.age, alice.name)
 
 #3
 diego = Person("Diego L.", 20)
@@ -38,4 +37,4 @@ min_age= people[0]
 for i in people:
     if i.age < min_age.age:
         min_age = i
-print(f"Il più giovane è: {min_age.name} {min_age.age}")
+print(f"Il più giovane è: {min_age.name}, {min_age.age}")
