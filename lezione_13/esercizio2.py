@@ -8,6 +8,7 @@ def sum(n:int) -> int:
             sum += n
             n -= 1
         print(sum)
+        return int(sum)
         
 sum(5)
 sum(-5)
