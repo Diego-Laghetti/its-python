@@ -2,7 +2,7 @@ body{
     color: #000000;
     background-color: grey;
     text-align: center;
-    font-family: sans-serif;
+    font-family: helvetica;
     border-left: 50px;
     border-right: 50px;
     padding-top: 2.5%;
@@ -11,11 +11,10 @@ body{
     padding-bottom: 2.5%;
 }
 ul{
+    color: #ffffff;
     font-size: 20px;
     list-style-type: none;
-    background-color: #ffffff;
-    box-shadow: 3px 4px 4px 6px rgb(54, 54, 54);
-    border-radius: 10px;
+    padding-right: 2.5%;
 }
 img{
     border-radius: 10px;
@@ -24,17 +23,22 @@ img{
     box-shadow: 3px 4px 4px 6px rgb(54, 54, 54);
 }
 p{
-    background-color: #ffffff;
-    box-shadow: 3px 4px 4px 6px rgb(54, 54, 54);
+    color: #ffffff;
     border-radius: 10px;
+    font-size: 30px;
 }
-h1{
-    background-color: #ffffff;
-    box-shadow: 3px 4px 4px 6px rgb(54, 54, 54);
+h2{
+    color: #ffffff;
     border-radius: 10px;
+    font-size: 50px;
 }
 a{
-    background-color: #ffffff;
     border-radius: 10px;
-    color: #000000;
+    color: #ffffff;
+}
+h1{
+    font-size: 100px;
+    color: #ffffff;
+    padding-bottom: 0%;
+    padding-top: 0%;
 }
