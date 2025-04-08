@@ -1,4 +1,4 @@
-#esercizio3
+#3esempio
 def sumInRange(a:int, b:int) -> int:
     if a > b:
         c:int = a

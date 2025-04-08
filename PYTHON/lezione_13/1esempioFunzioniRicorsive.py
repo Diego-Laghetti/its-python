@@ -1,4 +1,4 @@
-#esercizio1FunzioniRicorsive
+#1esempioFunzioniRicorsive
 def countdown(n:int) -> None:
     if n < 0 :
         print("Error! Inserted number is negative!")

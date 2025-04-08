@@ -1,4 +1,4 @@
-#esercizio2
+#2esempio
 def sum(n:int) -> int:
     if n < 0:
         print("error")

@@ -1,4 +1,4 @@
-#esercizio2FunzioniRicorsive
+#2esempioFunzioniRicorsive
 def recursiveSum(n:int) -> int:
     if n < 0:
         print("Error! Inserted number is negative!")

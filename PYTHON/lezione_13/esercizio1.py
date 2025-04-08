@@ -1,15 +1,10 @@
 #esercizio1
-def countdown(n:int)->None:
-    if n < 0:
-        print("error")
-    while n >= 0:
-        print(n)
-        n -= 1
-
-countdown(5)
-countdown(-5)
- 
-
-
-
-
+def recursivePower(base: int, exponent: int) -> int:
+    if exponent == 0:
+        return 1
+    elif base == 0:
+        return 0
+    else:
+        return int(base * recursivePower(base, exponent - 1))
+    
+print(f"3^4 = {recursivePower(3,4)}")

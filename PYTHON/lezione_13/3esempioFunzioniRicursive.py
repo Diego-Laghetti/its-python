@@ -1,4 +1,4 @@
-#esercizio3FunzioniRicursive
+#3esempioFunzioniRicursive
 def recursiveSumInRange(a:int, b:int) -> int:
     if a > b:
         temp:int = a
