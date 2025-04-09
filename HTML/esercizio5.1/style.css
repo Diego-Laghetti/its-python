@@ -1,0 +1,68 @@
+.body_background {
+    background-color: #b7ebaf;
+}
+
+.centra_contenuto {
+    text-align: center;
+}
+
+.contenitore_principale {
+    background-color: white;
+    width: 25cm;
+    padding: 10px;
+}
+
+.top_img {
+    width: 25cm;
+    height: 4cm;
+}
+
+.barra_grigia {
+    background-color: #d3d3d3;
+}
+
+.centra_contenuto {
+    display: flex;
+    justify-content: center;
+}
+
+.descrizione {
+    text-align: justify;
+}
+
+td{
+    padding: 2px;
+}
+
+.foto_libro {
+    width: 130px;
+
+}
+
+.dettagli {
+    width: 12cm;
+}
+
+.titolo,
+.categoria,
+.editore,
+.codice,
+.prezzo,
+.disponibilità,
+.info {
+    background-color: #f1f1f1;
+    padding: 2px;
+}
+
+.titolo {
+    font-weight: bold;
+}
+
+.info {
+    text-align: right;
+    font-style: italic;
+}
+
+.divisore {
+    width: 12cm;
+}
