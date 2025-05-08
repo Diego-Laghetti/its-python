@@ -6,6 +6,8 @@ file = open(PATH, mode)
 
 print(file)
 #input_text: str = input("Enter text to write to the file: ")
-output: str = file.write("forza laziooooo")
+message: str = 'forza lazio'
+output: str = file.write(message)
+print(message)
 print(output)
 file.close()
