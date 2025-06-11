@@ -36,8 +36,8 @@ def ceasar_cypher_decrypt (s: str, key: int) -> str:
     return ceasar_cypher_encrypt(s, -key) #richiama la funzione di prima al contrario
 
 
-criptato = ceasar_cypher_encrypt("ciao belli de casa forza lazio", 1)
+criptato = ceasar_cypher_encrypt("ciao belli de casa forza lazio", 26)
 print("Criptato:", criptato)
 
-decriptato = ceasar_cypher_decrypt(criptato, 1)
+decriptato = ceasar_cypher_decrypt(criptato, 26)
 print("Decriptato:", decriptato)
