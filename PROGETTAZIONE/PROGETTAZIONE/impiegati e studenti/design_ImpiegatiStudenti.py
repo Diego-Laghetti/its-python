@@ -1,18 +1,20 @@
 from __future__ import annotations
-from custom_types import *
+from mytypes import *
 
 
 class Persona:
     _nome: str
     _cognome: str
-    _cf: list[Cf] # [1..*]
+    _cf: list[Cf]  #[1..*]
     _genere: Genere
-    _maternita: IntGEZ # [0..1] - deve avere un valore se e solo se _genere = Genere.donna
-    _posizione_mil: PosizioneMilitare | None # [0..1] da aggregazione, deve avere un valore se e solo se _genere = Genere.uomo
+    _maternita: IntGEZ  #[0..1]
+    _posizione_mil: PosizioneMilitare | None  #[0..1]
 
-    def __init__(self, *, nome: str, cognome: str, cf: list[Cf], genere: Genere, maternita: IntGEZ|None=None) -> None:
+    def __init__(self, *, nome: str, cognome: str, cf: list[Cf], genere: Genere, maternita: IntGEZ | None = None) -> None:
         self._nome = nome
         self._cognome = cognome
+        self._cf = cf  
+        self._genere = genere  
         if not cf:
             raise ValueError("La persona deve avere almeno un codice fiscale")
 
@@ -37,11 +39,11 @@ class Persona:
 
 
 class Impiegato(Persona):
-    _stipendio:RealGEZ 
-    _ruolo:Ruolo
-    _is_responsabile:bool 
+    _stipendio: RealGEZ
+    _ruolo: Ruolo
+    _is_responsabile: bool
 
-    def __init__(self, *, nome, cognome, cf, genere, maternita = None, stipendio, ruolo:Ruolo):
+    def __init__(self, *, nome, cognome, cf, genere, maternita=None, stipendio, ruolo: Ruolo):
         super().__init__(nome=nome, cognome=cognome, cf=cf, genere=genere, maternita=maternita)
         self.set_stipendio(stipendio)
         self.set_ruolo(ruolo)
@@ -49,13 +51,13 @@ class Impiegato(Persona):
 
     def stipendio(self):
         return self._stipendio
-    
+
     def ruolo(self):
         return self._ruolo
-    
+
     def is_responsabile(self):
         return self._is_responsabile
-    
+
     def set_stipendio(self, stipendio):
         self._stipendio = stipendio
 
@@ -63,11 +65,11 @@ class Impiegato(Persona):
         self._ruolo = ruolo
 
     def set_is_responsabile(self):
-        if self.ruolo == Ruolo.progettista:
+        if self._ruolo == Ruolo.progettista:
             self._is_responsabile = True
         else:
             self._is_responsabile = False
-    
+
     def diventa_segretario(self):
         if self._ruolo == Ruolo.segretario:
             raise RuntimeError("La persona era già un segretario")
@@ -80,58 +82,63 @@ class Impiegato(Persona):
 
     def diventa_progettista(self):
         if self._ruolo == Ruolo.progettista:
-            raise RuntimeError("La persona era già un direttore")
+            raise RuntimeError("La persona era già un progettista")  
         self._ruolo = Ruolo.progettista
         self.set_is_responsabile()
 
-class Studente(Persona):
-    _matricola:IntGZ #{id} <<immutabile>>
 
-    def __init__(self, *, nome, cognome, cf, genere, maternita = None, matricola):
+class Studente(Persona):
+    _matricola: IntGZ  #{id}
+
+    def __init__(self, *, nome, cognome, cf, genere, maternita=None, matricola):
         super().__init__(nome=nome, cognome=cognome, cf=cf, genere=genere, maternita=maternita)
         self._matricola = matricola
 
     def matricola(self):
         return self._matricola
-    
+
+
 class Progetto:
-    _nome:str
+    _nome: str
 
     def __init__(self, nome):
         self.set_nome(nome)
 
     def nome(self):
         return self._nome
-    
+
     def set_nome(self, nome):
         self._nome = nome
 
+
 class PosizioneMilitare:
-    _nome:str #{id} <<immutabile>>
+    _nome: str  # {id}
 
     def __init__(self, nome):
         self._nome = nome
 
     def nome(self):
         return self._nome
-    
+
+
 class resp_prog:
     class _link:
-        _impiegato:set[Impiegato] #non noto alla nascita
-        _progetto:set[Progetto] #non noto alla nascita
+        _impiegato: set[Impiegato]
+        _progetto: set[Progetto]
 
         def __init__(self, impiegato, progetto):
             self.set_impiegato(impiegato)
             self.set_progetto(progetto)
 
         def impiegato(self):
-            return frozenset[self._impiegato]
-    
+            return frozenset(self._impiegato)
+
         def progetto(self):
-            return frozenset[self._progetto]
-    
-        def set_impiegato(self, impiegato:set[Impiegato]):
+            return frozenset(self._progetto)
+
+        def set_impiegato(self, impiegato: set[Impiegato]):
             self._impiegato = impiegato
 
-        def set_progetto(self, progetto:set[Progetto]):
+        def set_progetto(self, progetto: set[Progetto]):
             self._progetto = progetto
+

@@ -1,16 +1,11 @@
 from datetime import date
 from custom_types import RealGEZ
-from  typing import TYPE_CHECKING
-if TYPE_CHECKING:
-    from impiegato import Impiegato
-    from progetto import Progetto
 
 class Impiegato:
     _nome: str # noto alla nascita
     _cognome: str # noto alla nascita
     _nascita: date # <<immutable>>, noto alla nascita
     _stipendio: RealGEZ # noto alla nascita
-    _progetti: set['Progetto'] | None
 
 
     def __init__(self, nome: str, cognome: str, nascita: date, stipendio: RealGEZ) -> None:
@@ -39,25 +34,6 @@ class Impiegato:
 
     def set_stipendio(self, s: RealGEZ) -> None:
         self._stipendio = s
-
-    def add_progetto(self, p: Progetto) -> None:
-        if p not in self._progetti:
-            self._progetti.add(p)
-        else:
-            print ("Progetto già presente")
-
-    def remove_progetto(self, p: Progetto) -> None:
-        try:
-            self.progetti.remove(p)
-            try:
-                p.remove_impiegato(self)
-            except ValueError:
-                pass
-        except IndexError:
-            pass
-
-    def progetti(self) -> frozenset['Progetto']:
-        return frozenset(self._progetti)
     
     def __repr__(self) -> str:
-        return f'Impiegato {self.nome()}'
+        return f"Impiegato {self.nome()}, {self.cognome()}, {self.nascita()}, {self.stipendio()}"
