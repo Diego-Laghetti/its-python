@@ -1,0 +1,15 @@
+-[V.PrivatoBid.nonSelfBid] Gli utenti privati non possono fare bid sulle aste pubblicate da loro.
+
+Per ogni istanza p: Privato coinvolto nel link di associazione priv_us con istanza di a: Asta e a: Usato, non possono esistere b: Bid nel link di associazioneasta_bid insieme ad a e che bid_ut che coinvolgono sia b che p.
+
+-L'istante di acquisto di un post in modalità "compralo subito" deve essere successivo alla pubblicazione del post.
+
+Per ogni instanza c di CompraloSubito sia ut instanza di Privato tale che (c, ut): cs_ut.istante deve essere maggiore di c.pubblicazione
+
+-I feedback dei post possono essere dati solo dopo che il post è stato acquistato in modalità "compralo subito" oppure se l'asta è terminata e ha un vincitore (cioè, almeno un bid).
+
+Per ogni instanza po: PostOggetto sia cs: CompraloSubito sia a: Asta esiste p: PostConFeedback solo se esiste cs oppure esiste a.ultimobid
+
+-Per ogni instanza c: Categoria dove c[1] è padre ci c[2] e cosi via, cn non può essere padre di c[1]
+
+

@@ -1,0 +1,14 @@
+SPECIFICA OPERAZIONE PREZZO DELLA CLASSE ASTA 
+
+Pre-prezzo(i: DataOra): Reale >= 0
+
+Pre-condizioni:
+	-L'oggetto della classe Asta, d'invocazione ("this") deve essere coinvolto in almeno un link di tipo "asta_bid" con valore per l'attributi istante non successivo al valore "i".
+Post-condizioni: 
+	-L'operazione non modifica il livello estensionale (gli ogegtti)
+	-Il valore del risultato ("result") è definito come segue:
+		-Sia A l'insieme che rappresenta tutti i link di associazione "asta_bid" "this" tali da avere l'attributo "istante" non successivo al valore "i" 
+		-Sia B l'insieme degli oggetti della classe "Bid" coinvolti nel link di associazione "asta_bid" che coinvolgono "this"
+		-Sia TB la cardinalità dell'insieme B (ovvero il numero di elementi di B)
+		-result = (prezzo_bid*bid) + prezzo_iniziale (il prezzo di ogni corrispondente all'attributo "prezzo_bid" della classe "Asta", per TB, aggiunto al prezzo iniziale dell'oggetto	corrispondente all'attributo "prezzo" della classe "PostOggetto")												
+		:) 

@@ -1,0 +1,42 @@
+-DOCENTE
+Precondizioni:
+Il docente è registrato e conosce le credenziali.
+Postcondizioni:
+Il docente ha effettuato l’accesso ed è pronto a registrare un impegno.
+
+-IMPEGNO
+Precondizioni:
+Il docente ha effettuato l’accesso.
+Il sistema è pronto per inserire impegni.
+Postcondizioni:
+È stato creato un nuovo impegno associato al docente.
+
+-ASSENZA
+Precondizioni:
+Il docente è autenticato.
+È stato scelto il tipo “Assenza”.
+Postcondizioni:
+L’assenza è stata registrata con data e motivo.
+
+-IMPEGNO ISTITUZIONALE
+Precondizioni:
+Il docente è autenticato.
+È stato scelto il tipo “Istituzionale”.
+Postcondizioni:
+L’impegno è stato salvato con data, durata e motivo, ed è collegato al docente.
+
+-IMPEGNO PROGETTUALE
+Precondizioni:
+Il docente è autenticato.
+È stato scelto il tipo “Progettuale”.
+Postcondizioni:
+L’impegno è stato registrato con i dati inseriti.
+Se è stato scelto un progetto, l’impegno è collegato ad esso.
+
+-WORK PACKAGE (WP)
+Precondizioni:
+Il progetto selezionato contiene dei WP.
+Postcondizioni:
+Il docente ha visualizzato i WP del progetto.
+
+

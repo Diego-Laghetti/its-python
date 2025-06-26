@@ -1,0 +1,21 @@
+conclusa(): Boolenao
+	precondizioni: nessuna.
+	postcondizioni:
+		- Non ha side effect.
+		- Se adesso > this.scadenza, result = True
+		- Altrimenti result = False
+		
+ultimo_bid(i: DataOra): Bid[0..1]
+	precondizioni: nessuna.
+	postcondizioni:
+		-Non ha side effect
+		- Sia B l'insieme dei b: Bid coinvolti in asta_bid con this, tali che b.istante <= i.
+			 B = {b1, b2, b3, ..., bn}
+			 
+vincitore(): Utente[0..1]
+	precondizioni: this.conculsa() è True
+	postcondizioni:
+		- b = this.ultimo_bid(adesso).
+		- result è il p: Privato tale che sia coinvolto in un link di associazione bid_ut con b.
+			 
+
