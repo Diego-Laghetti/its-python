@@ -1,0 +1,18 @@
+.ciao{
+    padding-top: 5%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.card-body,
+.card-header{
+    text-align: center;
+}
+.card-title{
+    font-size: 35px;
+}
+.card-text{
+    font-size: 14px;
+}
+hr{
+    padding-left: 100px;
+}

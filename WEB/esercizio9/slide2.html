@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Valori della variabile</h1>
+    <p id="valore-iniziale"></p>
+    <p id="valore-modificato"></p>
+
+    <script>
+        // Dichiaro la variabile e assegno il valore iniziale
+        let numero = 100;
+
+        // Mostro il valore iniziale nel primo paragrafo
+        document.getElementById("valore-iniziale").textContent = "Valore iniziale: " + numero;
+
+        // Cambio il valore della variabile
+        numero = 70;
+
+        // Mostro il nuovo valore nel secondo paragrafo
+        document.getElementById("valore-modificato").textContent = "Valore modificato: " + numero;
+    </script>
+
+</body>
+</html>

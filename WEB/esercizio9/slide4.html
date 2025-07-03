@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Verifica tipo variabile</h1>
+    <p id="valore-iniziale"></p>
+    <p id="is-numeric"></p>
+    <p id="valore-convertito"></p>
+
+    <script>
+        // Step 1: Dichiaro la variabile stringa
+        let valore = '17';
+
+        // Step 2: Mostro valore e tipo
+        document.getElementById("valore-iniziale").textContent = "Valore iniziale: " + valore + " (tipo: " + typeof valore + ")";
+
+        // Step 3: Verifico se è numerico
+        let isNumeric = !isNaN(valore);
+
+        // Step 4: Stampo true/false
+        document.getElementById("is-numeric").textContent = "È numerico? " + isNumeric;
+
+        // Step 5: Converto in numero
+        let numeroConvertito = Number(valore);
+
+        // Step 6: Stampo nuovo valore e tipo
+        document.getElementById("valore-convertito").textContent = "Valore convertito: " + numeroConvertito + " (tipo: " + typeof numeroConvertito + ")";
+    </script>
+
+</body>
+</html>

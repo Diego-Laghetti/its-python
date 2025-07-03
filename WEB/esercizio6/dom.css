@@ -1,0 +1,11 @@
+body{
+    margin: auto;
+    text-align: center;
+    font-family: helvetica;
+}
+table{
+    margin: auto;
+}
+td{
+    padding: 10px;
+}

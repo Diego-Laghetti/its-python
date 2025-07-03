@@ -37,8 +37,7 @@ class coinvolto:
             
         def __eq__(self, other:Any) -> bool:
             if type(self) != type(other) or hash(self) != hash(other):
-                    return False
-                
+                return False
             return (self.impiegato(), self.progetto()) == (other.impiegato(), other.progetto())
         
         def __repr__(self):

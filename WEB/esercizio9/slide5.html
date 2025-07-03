@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Step 1: Giorni in una stringa separati da virgole
+        let giorni = "Lunedì,Martedì,Mercoledì,Giovedì,Venerdì,Sabato,Domenica";
+
+        // Step 2: Stampo la stringa intera
+        console.log("Stringa completa:");
+        console.log(giorni);
+
+        // Step 3: Una sola modifica: uso .split(",") e ciclo
+        console.log("Giorni uno per riga:");
+        let giorniSingoli = giorni.split(",");
+        for (let giorno of giorniSingoli) {
+            console.log(giorno);
+        }
+    </script>
+</html>

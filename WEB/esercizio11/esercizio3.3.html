@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>esercizio3.3</title>
+</head>
+<body>
+    <div id="risultato"> </div>
+
+    <script>
+        var num1 = prompt("Inserisci un numero di secondi:");
+        var n1 = parseInt(num1);
+            var ore = parseInt(n1 / 3600);
+            var minuti = parseInt((n1 % 3600) / 60);
+            var secondi = n1 % 60;
+
+            var risultato = ore + " ore, " + minuti + " minuti, " + secondi + " secondi";
+            document.getElementById("risultato").innerHTML = "Equivale a: " + risultato;
+    </script>
+</body>
+</html>

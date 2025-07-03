@@ -28,7 +28,7 @@ def ceasar_cypher_encrypt (s: str, key: int) -> str:
             x = ascii_lowercase.index(carattere) #prende la posizione del carattere nella lista con .index()
             nuovocarattere = ascii_lowercase[(x + key) % 26] #valore del nuovo carattere
             risultato += nuovocarattere #aggiunge il nuovo carattere al risultato
-        else: #se il carattere non è compreso in ascii_lowercase
+        else: #se il carattere non è compreso in ascii_lowercase 
             risultato += carattere 
     return risultato
 

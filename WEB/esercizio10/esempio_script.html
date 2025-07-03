@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ciao</title>
+</head>
+<body>
+    <div id="risultato"> </div>
+    <div id="esito"> </div>
+
+    <script>
+        var nome = prompt("Inserisci il tuo nome");
+        document.getElementById("risultato").innerHTML = "Ciao " + nome;
+        var num1 = prompt("Inserisci numero");
+        var num2 = prompt("Inserisci numero");
+
+        // trasformo l'input da STRING  a INT
+        var n1 = parseInt(num1);
+        var n2 = parseInt(num2);
+        document.getElementById("esito").innerHTML = "la somma è " + (n1 + n2);
+    </script>
+</body>
+</html>

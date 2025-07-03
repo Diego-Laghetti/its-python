@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Valori e tipi delle variabili</h1>
+    <p id="output-x"></p>
+    <p id="output-y"></p>
+    <p id="output-z"></p>
+
+    <script>
+        // Dichiarazione e inizializzazione
+        let x = 10;
+        let y;
+        y = x;
+        let z = "Luca";
+
+        // Output valori e tipi
+        document.getElementById("output-x").textContent = "x = " + x + " (tipo: " + typeof x + ")";
+        document.getElementById("output-y").textContent = "y = " + y + " (tipo: " + typeof y + ")";
+        document.getElementById("output-z").textContent = "z = " + z + " (tipo: " + typeof z + ")";
+    </script>
+
+</body>
+</html>

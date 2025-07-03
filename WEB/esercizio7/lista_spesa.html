@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista della Spesa</title>
+  <link href ="lista.css" rel="stylesheet">
+</head>
+<body>
+  <div id="contenitore">
+    <h2>Lista della Spesa</h2>
+    <input type="text" id="prodotto" placeholder="Scrivi un prodotto">
+    <button id="aggiungiBtn">Aggiungi</button>
+    <ul id="lista"></ul>
+    <button id="clearbutton">Svuota lista</button>
+  </div>
+    <script>
+    document.getElementById("aggiungiBtn").addEventListener("click", function() {
+    var input = document.getElementById("prodotto");
+    var nomeProdotto = input.value;
+    if (nomeProdotto !== "") {
+        var nuovoElemento = document.createElement("li");
+        nuovoElemento.textContent = nomeProdotto;
+        document.getElementById("lista").appendChild(nuovoElemento);
+        input.value = "";
+      }
+    });
+    document.getElementById("clearbutton").addEventListener("click", function() {
+    document.getElementById("lista").innerHTML = "";
+    });
+  </script>
+</body>
+</html>

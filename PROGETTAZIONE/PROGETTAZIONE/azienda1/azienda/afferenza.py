@@ -31,7 +31,6 @@ class afferenza:
 
     @classmethod
     def remove_link(cls, link: _link):
-        
         for x in cls.afferenza_link:
             y = x.get('Link')
             for l in y:

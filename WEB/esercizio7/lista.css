@@ -1,0 +1,40 @@
+body {
+  font-family: Helvetica;
+  background-image: url("lazio.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  padding-top: 25px;
+}
+#contenitore {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin: auto;
+}
+input, button {
+  padding: 10px;
+  margin: 10px 5px;
+  width: 80%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  background-color: #f0f2c9;
+  margin: 5px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+#clearbutton {
+  background-color: #c9e3f2;
+  color: black;
+}
