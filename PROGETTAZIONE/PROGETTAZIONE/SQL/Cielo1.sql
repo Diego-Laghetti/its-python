@@ -1,74 +1,61 @@
-BEGIN TRANSACTION;
-SET CONSTRAINTS ALL DEFERRED;
+begin transaction;
+
+-- Creazione dei domini
+
+create domain PosInteger as integer check (value >= 0);
+
+create domain StringaM as varchar(100);
+
+create domain CodIATA as
+  char(3);
 
 
-CREATE DOMAIN postinteger AS INTEGER
-    CHECK (VALUE >= 0);
+-- Creazione dello schema relazionale
 
-CREATE DOMAIN stringam AS VARCHAR(100);
-
-CREATE DOMAIN codIATA AS CHAR(3);
-
-CREATE TABLE compagnia (
-    nome stringam PRIMARY KEY,
-    annofondaz postinteger
+create table Compagnia(
+  nome StringaM not null,
+  annoFondaz PosInteger null,
+  primary key (nome)
 );
 
-CREATE TABLE volo (
-    codice postinteger NOT NULL,
-    comp stringam NOT NULL,
-    durataMinuti postinteger NOT NULL,
-    PRIMARY KEY (codice, comp),
-    FOREIGN KEY (comp) REFERENCES compagnia(nome)
+create table Aeroporto (
+  codice CodIATA not null,
+  nome StringaM not null,
+  primary key (codice)  
 );
 
-CREATE TABLE aeroporto (
-    codice codIATA PRIMARY KEY,
-    nome stringam NOT NULL
+create table LuogoAeroporto (
+    aeroporto CodIATA not null,
+    citta StringaM not null,
+    nazione StringaM not null,
+    primary key (aeroporto),
+    foreign key (aeroporto) references Aeroporto(codice) deferrable
 );
 
-CREATE TABLE luogoaeroporto (
-    aeroporto codIATA PRIMARY KEY,
-    citta stringam NOT NULL,
-    nazione stringam NOT NULL,
-    FOREIGN KEY (aeroporto) REFERENCES aeroporto(codice)
+alter table Aeroporto
+add foreign key (codice) references LuogoAeroporto(aeroporto) deferrable;
+
+create table ArrPart (
+  codice PosInteger not null,
+  comp StringaM not null,
+  arrivo CodIATA not null,
+  partenza CodIATA not null,
+  primary key (codice, comp),
+  foreign key (arrivo) references Aeroporto(codice) deferrable,
+  foreign key (partenza) references Aeroporto(codice) deferrable
 );
 
-CREATE TABLE arrpart (
-    codice postinteger NOT NULL,
-    comp stringam NOT NULL,
-    partenza codIATA NOT NULL,
-    arrivo codIATA NOT NULL,
-    PRIMARY KEY (codice, comp),
-    FOREIGN KEY (codice, comp) REFERENCES volo(codice, comp),
-    FOREIGN KEY (partenza) REFERENCES aeroporto(codice),
-    FOREIGN KEY (arrivo) REFERENCES aeroporto(codice)
+create table Volo (
+  codice PosInteger not null,
+  comp StringaM not null,
+  durataMinuti PosInteger not null,
+  primary key (codice, comp),
+  foreign key (comp) references Compagnia(nome) deferrable,
+  foreign key (codice, comp) references ArrPart(codice, comp) deferrable
 );
 
-INSERT INTO aeroporto (codice, nome)
-VALUES 
-    ('FCO', 'Aeroporto Leonardo Da Vinci'),
-    ('MXP', 'Aeroporto di Milano Malpensa');
-
-INSERT INTO luogoaeroporto (aeroporto, citta, nazione)
-VALUES 
-    ('FCO', 'Fiumicino', 'Italia'),
-    ('MXP', 'Milano', 'Italia');
-
-INSERT INTO compagnia (nome, annofondaz)
-VALUES 
-    ('WizardAir', 2006);
-
-INSERT INTO volo (codice, comp, durataMinuti)
-VALUES 
-    (101, 'WizardAir', 55),
-    (103, 'WizardAir', 50);
-
-INSERT INTO arrpart (codice, comp, partenza, arrivo)
-VALUES 
-    (101, 'WizardAir', 'FCO', 'MXP'),
-    (103, 'WizardAir', 'FCO', 'MXP');
-
-COMMIT;
+alter table ArrPart
+add foreign key (codice, comp) references Volo(codice, comp) deferrable;
 
 
+commit;
