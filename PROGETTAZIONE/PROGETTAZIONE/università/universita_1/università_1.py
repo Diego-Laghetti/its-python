@@ -1,4 +1,4 @@
-from My_types import *
+from my_types import *
 from datetime import datetime, time
 
 class Citta:
