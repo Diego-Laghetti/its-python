@@ -1,0 +1,9 @@
+def max_or_none(nums: list[int]) -> int | None:
+    max = 0
+    print(nums)
+    for n in nums:
+        if n > max:
+            n = max
+            return n
+        else:
+            return None
