@@ -29,7 +29,7 @@ def decrypt(encrypted_text, key):
 
 
 # Example usage
-key = "ThisIsASecretKey"  # 16 caratteri
+key = "ThisIsASecretKey"
 plain_text = "0"
 encrypted_text = encrypt(plain_text, key)
 decrypted_text = decrypt(encrypted_text, key)
